@@ -191,9 +191,11 @@ QQQ;
             try {
                 $table->generateTestValues();
             } catch (Exception $e) {
+                $this->tableGenerationStack = array();
                 echo "table name: ".$table->name.PHP_EOL;
                 throw $e;
             }
+            $this->tableGenerationStack = array();
         }
         echo PHP_EOL;
     }

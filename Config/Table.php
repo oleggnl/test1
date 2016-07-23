@@ -20,11 +20,6 @@ class Config_Table {
         }
 
         $this->readTableInfo();
-        $q = null;
-        $q = array('classification__category', 'classification__category_audit');
-        if (!in_array($tableName, $q)) {
-            $this->generateRowsCount = 3;
-        }
     }
 
     public function __destruct() {
